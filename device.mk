@@ -19,14 +19,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-# Google hurt us :(
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.control_privapp_permissions=log \
-    ro.adb.secure=0 \
-    persist.sys.usb.config=mtp,adb \
-    persist.service.debuggable=1 \
-    persist.service.adb.enable=1
-
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
